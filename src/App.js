@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from './components/Card'
+import Loading from './components/Loading'
+import { HipsterButton, DefaultButton } from './components/Buttons'
+import Form from './components/Form'
+import List from './components/List'
+import Products from './components/Products'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: '2rem' }}>
+      <Products />
+      <br />
+      <br />
+      <List />
+      <br />
+      <br />
+      <Form />
+      <br />
+      <br />
+      <Card />
+      <br />
+      <br />
+      <Loading />
+      <br />
+      <br />
+      <HipsterButton>Click me</HipsterButton>
+      <HipsterButton as="a" href="https://in.pinterest.com/hegdesharadhi/">
+        Click me
+      </HipsterButton>
+      <div
+        css={`
+          color: green;
+        `}
+      >
+        <h2>hello world</h2>
+      </div>
+      <DefaultButton>Click me</DefaultButton>
+      <DefaultButton large>Click me</DefaultButton>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
